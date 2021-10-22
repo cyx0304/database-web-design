@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+form {
+   font: 10pt Arial;
+   background-color: #eee;
+   padding: 10px;
+}
+label {
+   width: 50px;
+   display: inline-block;
+   text-align: right;
+   margin-right: 8px;
+}
+input[type=text], select {
+   width: 350px;
+   padding: 10px;
+   margin: 6px 0;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+}
+input[type=submit] {
+   width: 200px;
+   background-color: #09f;
+   color: white;
+   padding: 15px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+input[type=submit]:hover {
+   background-color: #07d;
+}
+</style>
+<head>Yuexing chen</head>
+<form>
+   <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="fullname">
+   </div>
+   <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email">
+   </div>
+   <div>
+      <label for="service">Service</label>
+      <select id="service" name="service">
+        <option>Basic</option>
+        <option>Prime</option>
+        <option>Deluxe</option>        
+      </select>
+   </div>
+  
+   <input type="submit" value="Register">
+</form>
+</html>
