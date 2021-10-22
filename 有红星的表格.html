@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.required::after {
+   color: red;
+   content: "*";
+}
+
+label {
+  width: 50px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 8px;
+}
+
+input[type=text], input[type=tel], input[type=email], input[list=titles]{
+  width: 350px;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #0000FF;
+}
+
+textarea {
+  background-color: rgba(71, 88, 175);
+  color: white;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+input[type=submit] {
+  margin: 15px 0 0 64px;
+}
+</style>
+  <head>
+     <title>Register for Web Workshop</title>
+     <link rel="stylesheet" href="register.css">
+  </head>
+   <body>
+      <h1>Registration for Web Workshop on November 10, 2021</h1>
+      <p><span class="required"></span> indicates required field.</p>
+      <form action="https://wp.zybooks.com/form-viewer.php" target="_blank">
+        <div>
+            <label class="required">Name</label>
+            <input type="text" name="name" required>
+        </div>
+        <div>
+            <label class="required">Phone</label>
+            <input type="tel" name="phone" required>
+        </div>
+        <div>
+            <label class="required">Email</label>
+            <input type="email" name="email" required>
+        </div>
+        <div>
+            <label class="required">Title</label>
+            <input list="titles" name="title" required>
+        </div>
+        <div>
+            <label id="special">Special Interests</label>
+            <textarea rows="3" cols="48" name="interest"></textarea>
+        </div>
+        <datalist id="titles">
+            <option value="Assistant Professor">
+            <option value="Associate Professor">
+            <option value="Professor">
+            <option value="Staff">
+            <option value="Student">
+            <option value="Other">
+        </datalist>
+        <input type="submit" value="Register">
+      </form>
+   </body>
+</html>
